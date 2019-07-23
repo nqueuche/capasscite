@@ -1,0 +1,39 @@
+<nav class="nav navbar navbar-expand-lg navbar-dark">
+    <div class="navbar-brand">
+
+        <h1 class="m-0">
+            <a class="site-nav-logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
+        </h1>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="nav navbar-nav mr-auto header-links">
+            <!-- Loop through the navigation items -->
+            {{#foreach navigation}}
+            <li class="nav-{{slug}}{{#if current}} nav-current{{/if}} nav-item">
+                <a class="nav-link " href="{{url absolute="true"}}">{{label}}</a>
+
+            </li>
+            {{/foreach}}
+            <!-- End the loop -->
+        </ul>
+    </div>
+</nav>
+
+
+<script>
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 5) {
+            $(".navbar").addClass("fixed-top");
+            $(".navbar").removeClass("navbar-dark");
+            $(".navbar").addClass("navbar-light");
+        } else {
+            $(".navbar").removeClass("fixed-top");
+        }
+    });
+</script>

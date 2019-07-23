@@ -1,0 +1,74 @@
+{{!< default}}
+
+<main>
+
+    <section class="hero text-light text-center">
+        <div class="container-sm">
+            <div class="hero-inner">
+                <h1 class="hero-title h2-mobile mt-0 is-revealing">Formation</h1>
+                <p class="hero-paragraph is-revealing">Notre offre de formation s’adapte à vos besoins : de l’initiation
+                    pour connaître ce que recouvrent les notions d’addictions, à des demandes plus spécifiques
+                    concernant certaines substances, une formation de perfectionnement en addictologie, sur une modalité
+                    individuelle comme collective.
+                </p>
+                {{!-- <p class="hero-cta is-revealing"><a class="button button-secondary button-shadow" href="#">Get started
+                        now</a></p> --}}
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="features-extended section">
+        <div class="container">
+            {{#get "posts" filter="featured:true + tag:'formation'" limit="all"}}
+            {{#foreach posts}}
+            <div class="card mb-12">
+                <div class="row no-gutters ">
+                    <div class="col-md-6">
+                        <img src="{{img_url feature_image}}" class="card-img">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <h5 class="card-title">{{title}}</h5>
+                            <p class="card-text">{{excerpt words="35"}}...</p>
+                            <a class="button button-primary button-block" href="/{{slug}}">Lire la suite</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            {{/foreach}}
+            {{/get}}
+
+        </div>
+        <div class="container">
+            <div class="card-wrap">
+                {{#get "posts" filter="featured:false + tag:'formation'"}}
+                {{#foreach posts}}
+
+                <div class="card" style="width: 17rem;">
+                    <img src="{{img_url feature_image}}" class="card-img">
+                    <div class="card-body">
+                        <h5 class="card-title">{{title}}</h5>
+                        <p class="card-text">{{excerpt words="25"}}...</p>
+
+                    </div>
+                    <div class="card-footer-custom"><a class="btn button button-primary button-block" href="/{{slug}}">Lire la
+                            suite</a></div>
+                </div>
+
+                {{/foreach}}
+                {{/get}}
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+</main>

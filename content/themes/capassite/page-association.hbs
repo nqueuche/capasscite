@@ -1,0 +1,68 @@
+{{!< default}}
+
+<main>
+
+    <section class="hero text-light text-center">
+        <div class="container-sm">
+            <div class="hero-inner">
+                <h1 class="hero-title h2-mobile mt-0 is-revealing">Association CaPASSCité</h1>
+                <p class="hero-paragraph is-revealing">L’association CaPASSCIté place au centre de son action l’être humain, son entourage, son désir de changement. L’ensemble de notre démarche s’inscrit dans un intérêt pour l’individu regardé comme le sujet de son histoire et de son propre devenir.
+</p>
+                {{!-- <p class="hero-cta is-revealing"><a class="button button-secondary button-shadow" href="#">Get started
+                        now</a></p> --}}
+                <div class="hero-media">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-extended section">
+        <div class="container">
+            {{#get "posts" filter="featured:true + tag:'association'" limit="all"}}
+            {{#foreach posts}}
+            <div class="card mb-12">
+                <div class="row no-gutters ">
+                    <div class="col-md-6">
+                        <img src="{{img_url feature_image}}" class="card-img">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <h5 class="card-title">{{title}}</h5>
+                            <p class="card-text">{{excerpt words="35"}}...</p>
+                            <a class="button button-primary button-block" href="/{{slug}}">Lire la suite</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            {{/foreach}}
+            {{/get}}
+
+        </div>
+        <div class="container">
+            <div class="card-wrap">
+                {{#get "posts" filter="featured:false + tag:'association'"}}
+                {{#foreach posts}}
+
+                <div class="card" style="width: 17rem;">
+                    <img src="{{img_url feature_image}}" class="card-img">
+                    <div class="card-body">
+                        <h5 class="card-title">{{title}}</h5>
+                        <p class="card-text">{{excerpt words="25"}}...</p>
+
+                    </div>
+                    <div class="card-footer-custom"><a class="btn button button-primary button-block" href="/{{slug}}">Lire la
+                            suite</a></div>
+                </div>
+
+                {{/foreach}}
+                {{/get}}
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+</main>
