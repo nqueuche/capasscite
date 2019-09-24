@@ -2,7 +2,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Nina Template</title>
+    <title>Association CaPASSCité</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:400,400i|PT+Serif:700" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -30,24 +30,33 @@
         {{{body}}}
         {{ghost_foot}}
     </div>
+    <div class="container">
+        <div class="col-sm-12">
+            <div class="contact-text">
+                <h4>Une question ? Besoin d'informations ? Contactez-nous !</h4>
+                <p>N'hésitez pas à nous écrire et nous vous répondrons dans les plus brefs délais.</p>
+            </div>
+            <div class="hero-cta is-revealing contact-button" style="text-align: center;">
+                <a class="button button-secondary button-shadow"
+                    href="https://nina063880.typeform.com/to/llqs7S">Contactez-nous</a>
+            </div>
+        </div>
+    </div>
     <footer class="site-footer">
         <div class="container">
             <div class="site-footer-inner">
-                <div class="brand footer-brand">
+                <div class="brand footer-brand ">
                     <a class="site-nav-logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
                 </div>
                 <ul class="footer-links list-reset">
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="{{@site.url}}/contact">Contact</a>
                     </li>
                     <li>
-                        <a href="#">About us</a>
+                        <a href="{{@site.url}}/association">L'association</a>
                     </li>
                     <li>
-                        <a href="#">FAQ's</a>
-                    </li>
-                    <li>
-                        <a href="#">Support</a>
+                        <a href="{{@site.url}}/faq">FAQ</a>
                     </li>
                 </ul>
                 {{!-- <ul class="footer-social-links list-reset">
@@ -76,8 +85,8 @@
                             </a>
                         </li>
                     </ul> --}}
-                <div class="footer-copyright">&copy; 2019 CaPASSCité, tout droits réservés</div>
             </div>
+            <div class="footer-copyright" style="justify-content: center; margin-bottom: 30px;">&copy; 2019 CaPASSCité, tout droits réservés</div>
         </div>
     </footer>
     <script src="{{asset "js/main.min.js"}}"></script>

@@ -1090,6 +1090,13 @@ label {
     height: 70px;
 }
 
+@media (max-width: 641px) {
+  .site-nav-logo img {
+    height: 45px;
+
+  }
+}
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -1574,4 +1581,13 @@ margin: 10px;
 
 .features-extended {
   margin-bottom: 100px;
+}
+
+.contact-text {
+  margin: 2em;
+  text-align: center;
+}
+
+.contact-button {
+  margin: 2em;
 }
